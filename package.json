@@ -27,7 +27,7 @@
 		"express-force-ssl": "^0.3.2",
 		"mqtt": "^4.3.8",
 		"multer": "^2.0.2",
-		"pngjs": "^5.0.0",
+		"pngjs": "^7.0.0",
 		"prettycron": "^0.10.0",
 		"slimbot": "^5.1.0",
 		"socks5-client": "^1.2.8",
