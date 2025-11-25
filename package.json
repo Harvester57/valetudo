@@ -35,11 +35,11 @@
 		"slimbot": "^5.1.0",
 		"socks5-client": "^1.2.8",
 		"ws": "^8.18.3",
-		"prettier": "3.2.5",
+		"prettier": "^3.6.2",
 		"eslint": "9.39.1",
 		"eslint-config-airbnb-base": "15.0.0",
 		"eslint-config-prettier": "10.1.8",
-		"eslint-plugin-import": "2.29.0"
+		"eslint-plugin-import": "2.32.0"
 	},
 	"devDependencies": {
 		"pkg": "5.8.1"
