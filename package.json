@@ -16,7 +16,9 @@
 		"prebuild": "cp -a client client.b && find client/ -type f \\( -iname \\*.json -o -iname \\*.js -o -iname \\*.html -o -iname \\*.css \\) -exec gzip -9 {} +",
 		"build-debug": "pkg --targets node16-linuxstatic-armv7 --compress -d --options jitless,no-use-idle-notification,max-old-space-size=32,optimize_for_size,gc_interval=100 --public-packages=prettycron . --output valetudo",
 		"build": "pkg --targets node16-linuxstatic-armv7 --compress --no-bytecode --options jitless,no-use-idle-notification,max-old-space-size=32,optimize_for_size,gc_interval=100 --public-packages=prettycron . --output valetudo",
-		"postbuild": "if [ -d client.b ]; then rm -fr client && mv client.b client; fi"
+		"postbuild": "if [ -d client.b ]; then rm -fr client && mv client.b client; fi",
+		"prettier": "./node_modules/.bin/prettier --check ./src/",
+		"lint": "./node_modules/.bin/eslint --max-warnings=0 --ext=js src"
 	},
 	"author": "",
 	"dependencies": {
@@ -32,7 +34,12 @@
 		"prettycron": "^0.10.0",
 		"slimbot": "^5.1.0",
 		"socks5-client": "^1.2.8",
-		"ws": "^8.18.3"
+		"ws": "^8.18.3",
+		"prettier": "3.2.5",
+		"eslint": "8.57.0",
+		"eslint-config-airbnb-base": "15.0.0",
+		"eslint-config-prettier": "9.1.0",
+		"eslint-plugin-import": "2.29.0"
 	},
 	"devDependencies": {
 		"pkg": "5.8.1"
