@@ -17,7 +17,7 @@
 		"build-debug": "pkg --targets node16-linuxstatic-armv7 --compress -d --options jitless,no-use-idle-notification,max-old-space-size=32,optimize_for_size,gc_interval=100 --public-packages=prettycron . --output valetudo",
 		"build": "pkg --targets node16-linuxstatic-armv7 --compress --no-bytecode --options jitless,no-use-idle-notification,max-old-space-size=32,optimize_for_size,gc_interval=100 --public-packages=prettycron . --output valetudo",
 		"postbuild": "if [ -d client.b ]; then rm -fr client && mv client.b client; fi",
-		"prettier": "./node_modules/.bin/prettier --check ./src/",
+		"prettier": "./node_modules/.bin/prettier --check .",
 		"lint": "./node_modules/.bin/eslint --max-warnings=0 --ext=js ."
 	},
 	"author": "",
@@ -31,7 +31,6 @@
 		"mqtt": "^4.3.8",
 		"multer": "^2.0.2",
 		"pngjs": "^7.0.0",
-		"prettier": "^3.6.2",
 		"prettycron": "^0.10.0",
 		"slimbot": "^5.1.0",
 		"socks5-client": "^1.2.8",
@@ -42,6 +41,7 @@
 		"eslint": "^9.39.1",
 		"eslint-plugin-react": "^7.37.5",
 		"globals": "^16.5.0",
-		"pkg": "5.8.1"
+		"pkg": "5.8.1",
+		"prettier": "^3.6.2"
 	}
 }
