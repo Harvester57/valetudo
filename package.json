@@ -18,7 +18,7 @@
 		"build": "pkg --targets node16-linuxstatic-armv7 --compress --no-bytecode --options jitless,no-use-idle-notification,max-old-space-size=32,optimize_for_size,gc_interval=100 --public-packages=prettycron . --output valetudo",
 		"postbuild": "if [ -d client.b ]; then rm -fr client && mv client.b client; fi",
 		"prettier": "./node_modules/.bin/prettier --check ./src/",
-		"lint": "./node_modules/.bin/eslint --max-warnings=0 --ext=js src"
+		"lint": "./node_modules/.bin/eslint --max-warnings=0 --ext=js ."
 	},
 	"author": "",
 	"dependencies": {
